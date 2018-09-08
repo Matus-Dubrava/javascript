@@ -1,0 +1,1 @@
+This is a simple algorithm that takes an integer and turns it into its binary representation (string)
