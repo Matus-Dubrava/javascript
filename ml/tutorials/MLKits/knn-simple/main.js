@@ -1,6 +1,6 @@
 // the actual function
 // - takes inputs from range [0, 10)
-function realFunction(x, y, z) {
+function testFunction(x, y, z) {
 	return x + 2 * y - z;
 }
 
@@ -94,7 +94,6 @@ function testAccuracy(dataset, trainTestRatio, k) {
 			k
 		);
 		const actual = testRow[testRow.length - 1];
-		// console.log(testRow, predicted, actual);
 		if (predicted === actual) {
 			correctCount++;
 		}
@@ -103,11 +102,10 @@ function testAccuracy(dataset, trainTestRatio, k) {
 	console.log("Accuracy: ", correctCount / testSet.length);
 }
 
-const dataset = buildDataset(10000, realFunction);
-const target = [5, 0, 9];
-
+const dataset = buildDataset(10000, testFunction);
 testAccuracy(dataset, 0.7, 3);
 
+// const target = [5, 0, 9];
 // const predicted = knn(dataset, target, 3);
 // const actual = realFunction(...target);
 
